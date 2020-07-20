@@ -5,11 +5,13 @@
 html {
   background-color: hsl(257, 40%, 49%);
   font-size: 14px;
+  height: 100%;
 }
 
 body {
   color: white;
   font-family: "Open Sans", sans-serif;
+  height: 100%;
   padding: 0;
   position: relative;
   margin: 0;
@@ -39,6 +41,12 @@ h1 {
 
 img {
   width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -90,4 +98,79 @@ p {
 
 .main__text p {
   margin-bottom: 1.5rem;
+}
+
+/* footer */
+.footer {
+  margin-top: 4rem;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item + .social__item {
+  margin-left: 1rem;
+}
+
+.social li a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  html {
+    height: 100%;
+    font-size: 16px;
+  }
+
+  body {
+    height: inherit;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    width: 25%;
+  }
+
+  .overlay {
+    background: url(/images/bg-desktop.svg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .main {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hero {
+    width: 50%;
+  }
+
+  .main__text {
+    text-align: left;
+    width: 47%;
+  }
+
+  .social {
+    margin-right: 3rem;
+    justify-content: flex-end;
+  }
 }
